@@ -1,0 +1,63 @@
+.header ,.sidebar,.sidenav,.maincontent,.footer
+{
+ display: grid;
+border: 2px solid white;
+text-align: center;
+
+align-content: center;
+color: white;
+font-weight: bold;
+
+
+}
+
+
+
+
+
+
+.container {  display: grid;
+  grid-template-columns: 2fr 3fr 2fr;
+  grid-template-rows: 1fr 3fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "header header header"
+    "sidenav maincontent sidebar"
+    "footer footer footer";
+    height: 700px;
+}
+
+.header { grid-area: header; background-color: rgb(81, 81, 232);}
+
+.sidenav { grid-area: sidenav; background-color:orangered ; }
+
+.sidebar { grid-area: sidebar; background-color: orangered; }
+
+.maincontent { grid-area: maincontent; background-color: rgb(55, 188, 55); }
+
+.footer { grid-area: footer; background-color:rgb(81, 81, 232) ; }
+@media(max-width:583px){
+  .container{
+    grid-template-areas:
+    "header header header"
+    "sidenav sidenav sidenav"
+    "maincontent maincontent maincontent"
+    "sidebar sidebar sidebar"
+    "footer footer footer";
+
+
+
+
+
+
+
+
+
+  }
+
+
+
+
+
+}
